@@ -29,7 +29,7 @@ int main(){
     else {
         
         for(i= n-1;i>=pos-1;i--){
-            a[i+i] = a[i];
+            a[i+1] = a[i];
         }
         a[pos -1] = element;
         n++;
@@ -37,6 +37,24 @@ int main(){
     for(i=0;i<n;i++){
         printf("%d ",a[i]);
     }
-    
+    printf("\n");
 
+    // delete an element from any position in array
+    int position;
+    scanf("%d",&position);
+
+    if(position <=0 || position >n){
+        printf("invalid positon\n");
+    }
+    else{
+        for(i=pos-1;i<n-1;i++){
+            a[i]=a[i+1];
+        }
+        n--;
+    }
+    for(i=0;i<n;i++){
+        printf("%d ",a[i]);
+    }
+    printf("\n");
+    return 0;
 }
