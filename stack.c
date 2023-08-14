@@ -1,7 +1,7 @@
 #include<stdio.h>
 #include<stdlib.h>
 
-// define a stack using arrey and structure
+// define a stack using array and structure
 #define stackMax 100
 typedef struct {
     int top;
